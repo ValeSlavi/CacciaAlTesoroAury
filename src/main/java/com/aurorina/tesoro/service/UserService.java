@@ -1,23 +1,16 @@
 package com.aurorina.tesoro.service;
 
 import com.aurorina.tesoro.entity.User;
+import com.aurorina.tesoro.repo.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class UserService {
-    private List<User> users = new ArrayList<>();
-
-    public UserService() {
-        // Utente fittizio
-        users.add(new User("valentina", "password"));
-    }
+    @Autowired
+    private UserRepository userRepository;
 
     public User authenticate(String username, String password) {
-        return users.stream()
-                .filter(u -> u.getUsername().equals(username) && u.getPassword().equals(password))
-                .findFirst()
-                .orElse(null);
+        return userRepository.findByUsernameAndPassword(username, password);
     }
 }

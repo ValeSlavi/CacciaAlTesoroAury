@@ -10,17 +10,19 @@
         <h1>Login</h1>
     </header>
     <main>
-        <form th:action="@{/loginIniziale}" method="post">
-            <div>
+        <form th:action="@{/loginIniziale}" method="post" >
+            <div class="form-center">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-            <div>
+            <div class="form-center">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div>
-                <button type="submit">Accedi</button>
+                <div class="form-center">
+                    <button type="submit" class="btn">Accedi</button>
+                </div>
             </div>
             <div th:if="${error}" style="color:red;">
                 <p th:text="${error}"></p>
@@ -28,7 +30,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; 2023 Tesoro. Tutti i diritti riservati a Valentina.</p>
+        <p>&copy; 2025. Tutti i diritti riservati a Valentina.</p>
     </footer>
 </body>
 </html>

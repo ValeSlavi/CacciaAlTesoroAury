@@ -10,13 +10,16 @@ import com.aurorina.tesoro.service.UserService;
 
 import org.springframework.ui.Model;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class LoginInizialeController {
     @Autowired
     private UserService userService;
 
     @GetMapping("/loginIniziale")
     public String showLoginForm() {
-        return "login";
+        return "loginIniziale";
     }
 
     @PostMapping("/loginIniziale")
@@ -28,7 +31,7 @@ public class LoginInizialeController {
             return "redirect:/";
         } else {
             model.addAttribute("error", "Credenziali non valide");
-            return "login";
+            return "loginIniziale";
         }
     }
 }

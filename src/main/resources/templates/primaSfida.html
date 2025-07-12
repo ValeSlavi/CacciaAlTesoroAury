@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Prima Sfida</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prima Sfida</title>
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Benvenuto alla Prima Sfida</h1>
-    </header>
-    <main>
-        <p>Sei pronto per la tua prima sfida? Metti alla prova le tue abilità!</p>
-        <form action="/PrimaSfida" method="post">
-            <div class="input-group">
-                <label for="risposta">La tua risposta:</label>
-                <input type="text" id="risposta" name="risposta" required>
-            </div>
-            <button type="submit">Invia</button>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2023 Tesoro. Tutti i diritti riservati.</p>
-    </footer>
+  <header>
+    <h1>Benvenuta alla Prima Sfida!</h1>
+  </header>
+  <main>
+    <p>
+      Per iniziare, ti ho fatto un primo indovinello facile facile<br>
+      <strong>Qual è la formula per calcolare il capitale sociale di un'azienda?</strong><br>
+      <span style="font-size:0.98em;color:#7c4dff;">
+        (Scrivi la risposta in minuscolo e senza spazi)
+      </span>
+    </p>
+    <form class="form-center" th:action="@{/PrimaSfida}" method="post">
+      <div class="input-group">
+        <input type="text" id="risposta" name="risposta" placeholder="Scrivi la formula qui..." autocomplete="off" />
+        <button type="submit" class="btn center-btn">Invia</button>
+      </div>
+    </form>
+    <div th:if="${esito}" class="error-message" th:utext="${esito}"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
+  </footer>
 </body>
 </html>

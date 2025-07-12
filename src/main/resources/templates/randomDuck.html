@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Papera Random</title>
+    <link rel="stylesheet" href="/css/randomDuck.css">
+    <link rel="icon" href="/img/duck-icon.png" type="image/png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Papera a Sorpresa!</h1>
+    </header>
+    <main style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;">
+        <div>
+            <img th:src="@{'/img/' + ${duckImg}}" alt="Papera random" class="random-duck">
+        </div>
+        <p class="random-duck-text">
+            Non hai inquadrato il QR code giusto, bevi un goccio d'acqua e continua a cercare quello giusto!
+        </p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

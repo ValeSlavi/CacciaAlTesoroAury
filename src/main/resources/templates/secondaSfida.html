@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seconda Sfida</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Seconda Sfida</h1>
+    </header>
+    <main>
+        <form action="/secondaSfida" method="post">
+            <label for="risposta">Inserisci la tua risposta:</label>
+            <input type="text" id="risposta" name="risposta" required>
+            <button type="submit">Invia</button>
+        </form>
+        <div>
+            <p th:text="${esito}"></p>
+        </div>
+    </main>
+</body>
+</html>

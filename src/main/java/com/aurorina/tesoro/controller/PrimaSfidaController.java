@@ -32,7 +32,7 @@ public class PrimaSfidaController {
             }
         }
         if (giusta) {
-            return "redirect:/secondaSfida";
+            return "redirect:/SecondaSfida";
         } else {
             model.addAttribute("esito", "&#x1F424; <strong>Non ci siamo!</strong> &#x1F424;<br><img src='/img/duck1.jpg' alt='Papera'>");
             return "primaSfida";

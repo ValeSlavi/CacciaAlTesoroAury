@@ -8,12 +8,12 @@ import org.springframework.ui.Model;
 
 @Controller
 public class SecondaSfidaController {
-    @GetMapping("/secondaSfida")
+    @GetMapping("/SecondaSfida")
     public String showSecondaSfida() {
         return "secondaSfida";
     }
 
-    @PostMapping("/secondaSfida")
+    @PostMapping("/SecondaSfida")
     public String checkRisposta(@RequestParam("risposta") String risposta, Model model) {
         String soluzione = "flag{HaiRisoltoLEnigma}";
         if (risposta != null && risposta.trim().equals(soluzione)) {

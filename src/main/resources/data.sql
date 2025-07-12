@@ -1,2 +1,1 @@
-INSERT INTO users (username, password) VALUES ('BadGirl', 'BuonCompleanno!');
-INSERT INTO users (username, password) VALUES ('Valentina', 'BuonCompleanno!');
+INSERT INTO users (username, password) VALUES ('Bad Girl', 'BuonCompleanno!');

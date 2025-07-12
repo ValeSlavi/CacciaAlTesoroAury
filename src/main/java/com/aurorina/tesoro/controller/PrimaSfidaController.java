@@ -21,7 +21,7 @@ public class PrimaSfidaController {
         String[] corrette = {
             "capitalesociale=attività-passività",
             "cs=a-p",
-            "capitalsociale=attività-passività",
+            "capitale sociale = attività - passività",
             "capitale=attività-passività"
         };
         boolean giusta = false;
@@ -34,7 +34,7 @@ public class PrimaSfidaController {
         if (giusta) {
             return "redirect:/secondaSfida";
         } else {
-            model.addAttribute("esito", "🐤 <strong>Non ci siamo!</strong> 🐤<br><img src='/img/duck1.jpg' alt='Papera'>");
+            model.addAttribute("esito", "&#x1F424; <strong>Non ci siamo!</strong> &#x1F424;<br><img src='/img/duck1.jpg' alt='Papera'>");
             return "primaSfida";
         }
     }

@@ -2,15 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Inizio dell'avventura</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
     <header>
-        <h1>Login</h1>
+        <h1>Partiamo con questa avventura!</h1>
     </header>
     <main>
-        <form th:action="@{/login}" method="post">
+        <p style="text-align: center;">Se sei pronta a partire allora inserisci come username il nome con cui <strong>ti ho salvata</strong> e come password <strong>"BuonCompleanno!"</strong></p>
+        <form th:action="@{/inizio}" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required autocomplete="username">
@@ -20,9 +21,7 @@
                 <input type="password" id="password" name="password" required autocomplete="current-password">
             </div>
             <button type="submit" class="btn center-btn">Accedi</button>
-            <div th:if="${error}" class="error-message">
-                <p th:text="${error}"></p>
-            </div>
+            <div th:if="${errorMessage}" class="error-message" th:utext="${errorMessage}"></div>
         </form>
     </main>
     <footer>

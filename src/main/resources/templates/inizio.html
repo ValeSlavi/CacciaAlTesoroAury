@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Inizio dell'avventura</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
     <header>
         <h1>Partiamo con questa avventura!</h1>
     </header>
     <main>
-        <p style="text-align: center;">Se sei pronta a partire allora inserisci come username il nome con cui <strong>ti ho salvata</strong> e come password <strong>"BuonCompleanno!"</strong></p>
+        <p>Se sei pronta a partire allora inserisci come username il nome con cui <strong>ti ho salvata</strong> e come password <strong>"BuonCompleanno!"</strong></p>
         <form th:action="@{/inizio}" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
@@ -25,7 +27,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; 2025. Tutti i diritti riservati a Valentina.</p>
+        <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>

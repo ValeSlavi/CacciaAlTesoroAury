@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/text.css">
 </head>
 <body>
     <header>
         <h1>Benvenuta alla tua caccia al Tesoro</h1>
     </header>
     <main>
-        <section>
-            <p>
-                Questa è il tuo mezzo regalo da parte mia, ovvero una specie di caccia al tesoro<strong> che ti ho preparato!!</strong><br>
-                Come hai scelto te sarà un'avventura ibrida, quindi ti servirà il tuo <strong>telefono</strong> e la tua voglia di camminare ed <strong>esplorare.</strong>
-            </p>
-        </section>
-        <section>
-            <div class="form-center">
-                <a th:href="@{/inizio}" class="btn center-btn">Avanti</a>
-            </div>
-        </section>
+        <p>
+            Questa è il tuo mezzo regalo da parte mia, ovvero una specie di caccia al tesoro <strong>che ti ho preparato!!</strong><br>
+            Come hai scelto te sarà un'avventura ibrida, quindi ti servirà il tuo <strong>telefono</strong> e la tua voglia di camminare ed <strong>esplorare.</strong>
+        </p>
+        <div style="display:flex;justify-content:center;margin-top:2.2rem;">
+            <a th:href="@{/inizio}" class="btn center-btn" style="min-width:160px;font-size:1.15rem;letter-spacing:1px;box-shadow:0 4px 16px rgba(124,77,255,0.18);padding:1rem 2.5rem;">Inizia l'avventura</a>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2025. Tutti i diritti riservati a Valentina.</p>
+        <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>

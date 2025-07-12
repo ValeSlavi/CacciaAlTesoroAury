@@ -1,4 +1,4 @@
-
+/* randomDuck.css: solo regole specifiche per la papera random */
 img.random-duck {
     display: block;
     max-width: 320px;
@@ -9,47 +9,10 @@ img.random-duck {
     margin-left: auto;
     margin-right: auto;
 }
-
-p.random-duck-text {
-    font-size: 1.2rem;
-    color: #7c4dff;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-button.btn.center-btn {
-    background: #9c4dcc;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 1rem 2.2rem;
-    font-size: 1.15rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(156, 77, 204, 0.15);
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 0.5rem;
-}
-button.btn.center-btn:hover {
-    background: #7a3fb3;
-    transform: scale(1.05);
-}
-
-/* Media query per schermi molto piccoli */
 @media (max-width: 400px) {
     img.random-duck {
         max-width: 180px;
         border-radius: 8px;
         margin-bottom: 0.7rem;
-    }
-    p.random-duck-text {
-        font-size: 0.95rem;
-        margin-bottom: 0.7rem;
-        padding: 0.3rem 0.1rem;
-    }
-    button.btn.center-btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1.2rem;
-        margin-top: 0.3rem;
     }
 }

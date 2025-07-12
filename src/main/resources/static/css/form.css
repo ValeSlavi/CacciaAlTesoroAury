@@ -1,0 +1,43 @@
+/* form.css: stili per form, input e bottoni */
+.input-group {
+    margin-bottom: 1rem;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #7c4dff;
+}
+.input-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #b388eb;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.btn, .center-btn {
+    background: linear-gradient(90deg, #7c4dff 60%, #b39ddb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 2px 8px rgba(124,77,255,0.13);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.7rem 2.2rem;
+    margin: 0.5rem auto 1.2rem auto;
+    display: block;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn:hover, .center-btn:hover {
+    background: linear-gradient(90deg, #b39ddb 0%, #7c4dff 100%);
+    transform: scale(1.04);
+}
+@media (max-width: 400px) {
+    .btn, .center-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+}

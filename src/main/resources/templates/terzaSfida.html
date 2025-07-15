@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terza Sfida</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/randomDuck.css">
+</head>
+<body>
+    <header>
+        <h1>Terza Sfida</h1>
+    </header>
+    <main>
+        <p>Sei pronto per la terza sfida? Ecco il tuo indovinello:</p>
+        <form class="form-center" th:action="@{/terzaSfida}" method="post">
+            <div class="input-group">
+                <input type="text" id="risposta" name="risposta" placeholder="Scrivi la risposta qui..." autocomplete="off" />
+                <button type="submit" class="btn center-btn">Invia</button>
+            </div>
+        </form>
+        <button class="btn center-btn" onclick="location.href='/duckRight'">Vai alla sfida successiva</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

@@ -34,8 +34,8 @@
         <div id="popup-indizio" class="popup-indizio">
             <div class="popup-indizio-content">
                 <span class="close-btn" onclick="chiudiIndizio()">&times;</span>
-                <h3>Indizio 🕵️‍♀️</h3>
-                <p>L'indizio: Non è azzurro, non è verde ma è...</p>
+                <h3>&#128373; Indizio:</h3>
+                <p>Non è azzurro, non è verde ma è...</p>
             </div>
         </div>
         <div th:if="${esito}" class="error-message" th:utext="${esito}"></div>
@@ -43,13 +43,6 @@
     <footer>
         <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
     </footer>
-    <script>
-        function mostraIndizio() {
-            document.getElementById('popup-indizio').style.display = 'flex';
-        }
-        function chiudiIndizio() {
-            document.getElementById('popup-indizio').style.display = 'none';
-        }
-    </script>
+    <script src="/js/popup.js"></script>
 </body>
 </html>

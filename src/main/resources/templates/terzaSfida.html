@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/text.css">
     <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/popup.css">
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
             In ogni luogo ha lasciato un piccolo <strong>indizio,</strong><br>
             un piccolo frammento di una frase misteriosa...<br>
             <br>
-            Trova tutti gli indizi e componi la frase completa che la peperella voleva farti capire.
+            Trova tutti gli indizi e <strong>componi la frase completa che la peperella voleva farti capire.</strong>
         </p>
         <form class="form-center" th:action="@{/terzaSfida}" method="post">
             <div class="input-group">
@@ -27,10 +28,28 @@
                 <button type="submit" class="btn center-btn" style="margin-bottom: 0;">Invia</button>
             </div>
         </form>
+        <div style="text-align:center; margin-top: 0.7rem;">
+            <button type="button" class="btn center-btn" onclick="mostraIndizio()">Hai bisogno di un indizio?</button>
+        </div>
+        <div id="popup-indizio" class="popup-indizio">
+            <div class="popup-indizio-content">
+                <span class="close-btn" onclick="chiudiIndizio()">&times;</span>
+                <h3>Indizio 🕵️‍♀️</h3>
+                <p>L'indizio: Non è azzurro, non è verde ma è...</p>
+            </div>
+        </div>
         <div th:if="${esito}" class="error-message" th:utext="${esito}"></div>
     </main>
     <footer>
         <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
     </footer>
+    <script>
+        function mostraIndizio() {
+            document.getElementById('popup-indizio').style.display = 'flex';
+        }
+        function chiudiIndizio() {
+            document.getElementById('popup-indizio').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

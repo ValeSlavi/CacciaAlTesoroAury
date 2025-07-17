@@ -1,0 +1,29 @@
+.popup-indizio {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(60,0,90,0.25);
+    justify-content: center;
+    align-items: center;
+}
+.popup-indizio-content {
+    background: #fff;
+    color: #4a148c;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(124,77,255,0.18);
+    text-align: center;
+    max-width: 320px;
+    margin: auto;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    color: #7c4dff;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -6,21 +6,28 @@
     <title>Terza Sfida</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/text.css">
-    <link rel="stylesheet" href="/css/randomDuck.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
     <header>
         <h1>Terza Sfida</h1>
     </header>
     <main>
-        <p>Sei pronto per la terza sfida? Ecco il tuo indovinello:</p>
+        <p class="random-duck-text" style="margin-top: 1.5rem;">
+            Ecco qui la tua terza sfida!<br>
+            Una peperella si è fatta una <strong>vacanza.</strong><br>
+            In ogni luogo ha lasciato un piccolo <strong>indizio,</strong><br>
+            un piccolo frammento di una frase misteriosa...<br>
+            <br>
+            Trova tutti gli indizi e componi la frase completa che la peperella voleva farti capire.
+        </p>
         <form class="form-center" th:action="@{/terzaSfida}" method="post">
             <div class="input-group">
-                <input type="text" id="risposta" name="risposta" placeholder="Scrivi la risposta qui..." autocomplete="off" />
-                <button type="submit" class="btn center-btn">Invia</button>
+                <input type="text" id="risposta" name="risposta" placeholder="Scrivi la frase qui..." autocomplete="off" />
+                <button type="submit" class="btn center-btn" style="margin-bottom: 0;">Invia</button>
             </div>
         </form>
-        <button class="btn center-btn" onclick="location.href='/duckRight'">Vai alla sfida successiva</button>
+        <div th:if="${esito}" class="error-message" th:utext="${esito}"></div>
     </main>
     <footer>
         <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>
